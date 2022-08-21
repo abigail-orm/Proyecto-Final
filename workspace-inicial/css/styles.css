@@ -1,3 +1,7 @@
+body {
+  background-color: #f8f9fa;
+}
+
 .jumbotron,
 .card-body,
 .container,
@@ -187,4 +191,21 @@ a.custom-card:hover {
 
 .checked {
   color: orange;
+}
+
+#myForm{
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+#myForm h2 {
+  width: auto;
+}
+
+#myForm button {
+  width: 25%;
+  height: 50px;
 }
