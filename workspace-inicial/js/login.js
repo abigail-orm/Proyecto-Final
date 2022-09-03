@@ -12,4 +12,10 @@ function llenarCampos(e){
     }
 }
 
+function setLocal() {
+    localStorage.setItem("email", document.getElementById("email").value);
+}
+
 form.addEventListener('submit', llenarCampos);
+form.addEventListener('submit', setLocal);
+
