@@ -39,6 +39,48 @@ function addFilter(){
     }else{
         filteredProdcuts = allProducts
     }
+
+    var orders = document.getElementsByName("options");
+    var selectedOrder;
+
+    orders.forEach( order => {
+        if  (order.checked) {4
+            selectedOrder = order.value;
+        }
+    });
+
+    if (selectedOrder == 'priceDown') {
+        filteredProdcuts.sort(function (a, b) {
+            if (a.cost > b.cost) {
+                return 1;
+            }
+            if (a.cost < b.cost) {
+                return -1;
+            }
+            return 0;
+        });
+    } else if (selectedOrder == 'priceUp') {
+        filteredProdcuts.sort(function (a, b) {
+            if (a.cost > b.cost) {
+              return -1;
+            }
+            if (a.cost < b.cost) {
+              return 1;
+            }
+            return 0;
+        })
+    } else if (selectedOrder == 'rel') {
+        filteredProdcuts.sort(function (a, b) {
+            if (a.soldCount > b.soldCount) {
+              return -1;
+            }
+            if (a.soldCount < b.soldCount) {
+              return 1;
+            }
+            return 0;
+        })
+    }
+    
     showProductsList(filteredProdcuts)
 }
 

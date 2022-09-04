@@ -69,26 +69,32 @@
                 type="radio"
                 class="btn-check"
                 name="options"
-                id="sortAsc"
+                id="sortByPriceDown"
+                value="priceDown"
               />
-              <label class="btn btn-light" for="sortAsc">A-Z</label>
-              <input
-                type="radio"
-                class="btn-check"
-                name="options"
-                id="sortDesc"
-              />
-              <label class="btn btn-light" for="sortDesc">Z-A</label>
-              <input
-                type="radio"
-                class="btn-check"
-                name="options"
-                id="sortByCount"
-                checked
-              />
-              <label class="btn btn-light" for="sortByCount"
+              <label class="btn btn-light" for="sortByPriceDown"
                 ><i class="fas fa-sort-amount-down mr-1"></i
-              ></label>
+              >$</label>
+              <input
+                type="radio"
+                class="btn-check"
+                name="options"
+                id="sortByPriceUp"
+                value="priceUp"
+              />
+              <label class="btn btn-light" for="sortByPriceUp"
+                ><i class="fas fa-sort-amount-up mr-1"></i
+              >$</label>
+              <input
+                type="radio"
+                class="btn-check"
+                name="options"
+                id="sortByRel"
+                value="rel"
+              />
+              <label class="btn btn-light" for="sortByRel"
+                ><i class="fas fa-sort-amount-down mr-1"></i
+              >Rel</label>
             </div>
           </div>
         </div>
