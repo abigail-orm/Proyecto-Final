@@ -7,15 +7,42 @@ request.open('GET', requestURL);
 
 request.responseType = 'json';
 request.send();
-let products = [];
+let allProducts = [];
 
 request.onload = function() {
-    products = request.response.products;
-    showProductsList();
+    allProducts = request.response.products;
+    showProductsList(allProducts);
 }
 
+function addFilter(){
+    let minFilter = document.getElementById("rangeFilterCountMin").value
+    let maxFilter = document.getElementById("rangeFilterCountMax").value
+    filteredProdcuts = []
+    if (minFilter && maxFilter) {
+        allProducts.forEach(product => {
+            if (product.cost >= minFilter && product.cost <= maxFilter) {
+                filteredProdcuts.push(product)
+            }
+        });
+    } else if (minFilter) { 
+        allProducts.forEach(product => {
+            if (product.cost >= minFilter) {
+                filteredProdcuts.push(product)
+            }
+        });
+    } else if (maxFilter) {
+        allProducts.forEach(product => {
+            if (product.cost <= maxFilter) {
+                filteredProdcuts.push(product)
+            }
+        });
+    }else{
+        filteredProdcuts = allProducts
+    }
+    showProductsList(filteredProdcuts)
+}
 
-  function showProductsList(){
+function showProductsList(products){
     let htmlContentToAppend = "";
     for(let i = 0; i < products.length; i++){
         let product = products[i];
@@ -28,8 +55,8 @@ request.onload = function() {
                     </div>
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">${product.name}</h4>
-                            <small class="text-muted">${product.soldCount} artículos</small>
+                            <h4 class="mb-1">${product.name} - ${product.currency} ${product.cost}</h4>
+                            <small class="text-muted">${product.soldCount} vendidos</small>
                         </div>
                         <p class="mb-1">${product.description}</p>
                     </div>
@@ -40,7 +67,7 @@ request.onload = function() {
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
     }
 
-  }
+}
 
 if (localStorage.getItem('catName')) {
     let catName = localStorage.getItem('catName')
