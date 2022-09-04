@@ -1,4 +1,5 @@
-const requestURL = 'https://japceibal.github.io/emercado-api/cats_products/101.json';
+const catId = localStorage.getItem('catID')
+const requestURL = 'https://japceibal.github.io/emercado-api/cats_products/' + catId.toString() + '.json';
 
 const request = new XMLHttpRequest();
 
@@ -40,3 +41,8 @@ request.onload = function() {
     }
 
   }
+
+if (localStorage.getItem('catName')) {
+    let catName = localStorage.getItem('catName')
+    document.getElementById('catName').innerHTML = catName;
+}
