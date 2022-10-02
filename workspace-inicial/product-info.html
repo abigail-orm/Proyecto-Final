@@ -32,6 +32,16 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <div class="dropdown">
+              <p class="nav-link" id="email" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mail
+              </p>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/cart.html">Mi Carrito</a></li>
+                <li><a class="dropdown-item" href="/my-profile.html">Mi Perfil</a></li>
+                <li><a class="dropdown-item" onclick="cerrarSesion()">Cerrar Sesion</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -58,20 +68,25 @@
       <h4>Comentarios</h4>
     </div>
 
-    <h3>
-      <h1>Comentar</h1>
-      <h2>Tu opinion</h2>
-      <textarea name="textarea" rows="10" cols="50"></textarea>
-      <form name="formulario" method="post">
-        Tu puntuacion
-         <select name="combo">
-          <option value="1">1</option>
-          <option value="2" selected>2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </form>
+    
+    <h1>Comentar</h1>
+    <h2>Tu opinion</h2>
+    <textarea name="textarea" rows="10" cols="50"></textarea>
+    <form name="formulario" method="post">
+      Tu puntuacion
+        <select name="combo">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </form>
+
+    <h2>Productos Relacionados</h2>
+    <div id="relatedProducts">
+
+    </div>
     
     </div>
       <button class="btn btn-primary" type="submit" id="regBtn">Enviar</button>

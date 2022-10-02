@@ -19,9 +19,21 @@ request.onload = function() {
     product.images.forEach(e => {
         document.getElementById('imageContainer').innerHTML += `<img src="${e}" class="img-thumbnail" style="width: 200px;">`
     });
-    
+    console.log(product)
+    product.relatedProducts.forEach(p => {
+        document.getElementById('relatedProducts').innerHTML += `
+            <div onclick="setProdID(${p.id})">
+                <img src="${p.image}" class="img-thumbnail" style="width: 200px;">
+                <p>${p.name}</p>
+            </div>
+        `
+    })
 }
 
+function setProdID(id) {
+    localStorage.setItem("prodID", id);
+    window.location = "product-info.html"
+}
 
 const requestComments = new XMLHttpRequest();
 requestComments.open('GET', requestURLComments);
@@ -30,7 +42,6 @@ requestComments.send();
 
 requestComments.onload = function() {
     let comments = requestComments.response;
-    console.log(comments)
     scoreText = ""
     comments.forEach(e => {
         for (let i = 1; i <= 5; i++) {
@@ -51,7 +62,4 @@ requestComments.onload = function() {
         scoreText = ""
     });
 }
-
-
-
    

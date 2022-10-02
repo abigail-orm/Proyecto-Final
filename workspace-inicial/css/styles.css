@@ -209,3 +209,7 @@ a.custom-card:hover {
   width: 25%;
   height: 50px;
 }
+
+#relatedProducts {
+  display: flex;
+}
