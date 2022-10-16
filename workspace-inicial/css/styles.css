@@ -213,3 +213,7 @@ a.custom-card:hover {
 #relatedProducts {
   display: flex;
 }
+
+.cartTable img {
+  height: 35px;
+}

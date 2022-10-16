@@ -46,10 +46,63 @@
     </div>
   </nav>
   <main>
+    <div class="text-center p-4">
+      <h2>Carrito De Compras</h2>
+    </div>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+       <h4>Articulos a comprar</h4>
+      <table class="table cartTable">
+        <thead>
+          <th></th>
+          <th>Nombre</th>
+          <th>Costo</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </thead>
+        <tbody id="cartTableBody">
+
+        </tbody>
+      </table>
+
+      <h4>Tipo de envío</h4>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Premium 2 a 5 días (15%)
+        </label>
       </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Express 5 a 8 días (7%)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Standard 12 a 15 días (5%)
+        </label>
+      </div>
+      </br>
+      <h4>Dirección de envío</h4>
+      <br>
+      <form>
+
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="calle">Calle</label>
+            <input type="text" class="form-control" id="calle">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="numero">Numero</label>
+            <input type="text" class="form-control" id="numero">
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="esquina">Esquina</label>
+          <input type="text" class="form-control" id="esquina">
+        </div>
+
     </div>
   </main>
   <footer class="text-muted">

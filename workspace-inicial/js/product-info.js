@@ -19,7 +19,6 @@ request.onload = function() {
     product.images.forEach(e => {
         document.getElementById('imageContainer').innerHTML += `<img src="${e}" class="img-thumbnail" style="width: 200px;">`
     });
-    console.log(product)
     product.relatedProducts.forEach(p => {
         document.getElementById('relatedProducts').innerHTML += `
             <div onclick="setProdID(${p.id})">
