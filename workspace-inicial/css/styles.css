@@ -217,3 +217,13 @@ a.custom-card:hover {
 .cartTable img {
   height: 35px;
 }
+
+.costRow {
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+.costRow div:nth-child(2) {
+  text-align: right;
+}
