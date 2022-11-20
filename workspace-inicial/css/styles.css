@@ -227,3 +227,14 @@ a.custom-card:hover {
 .costRow div:nth-child(2) {
   text-align: right;
 }
+
+#profile-form {
+  width: 90%;
+  margin: auto;
+}
+
+#profile-form button{
+  width: 160px;
+  margin: auto;
+  margin-top: 20px;
+}

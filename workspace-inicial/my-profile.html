@@ -61,9 +61,46 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    
+      
+        <h1 class="alert-heading">Perfil</h1>
+        <br>
+        <hr>
+        <div>
+
+        <form id="profile-form" class="row">
+          <div class="form-group col-md-6">
+            <label for="name">Primer nombre</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="secName">Segundo nombre</label>
+            <input type="text" class="form-control" id="secName">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastname">Primer apellido</label>
+            <input type="text" class="form-control" id="lastname" required>
+          </div>
+           <div class="form-group col-md-6">
+            <label for="secLastname">Segundo apellido</label>
+            <input type="text" class="form-control" id="secLastname">
+           </div>
+           <div class="form-group col-md-6">
+            <label for="mail">E-mail</label>
+            <input type="text" class="form-control" id="mail" required>
+          </div>
+           <div class="form-group col-md-6">
+            <label for="number">Teléfono de contacto</label>
+            <input type="text" class="form-control" id="number">
+           </div>
+
+           <button type="submit" class="btn btn-primary" id="guardarcambios" data-dismiss="modal">Guardar cambios</button>
+        </form>
+        <br>
+        <hr>
+        
+        
+        
       </div>
     </div>
   </main>
@@ -80,6 +117,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
